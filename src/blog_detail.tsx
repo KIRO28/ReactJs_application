@@ -3,8 +3,14 @@ import { useParams } from 'react-router-dom';
 import './BlogDetailPage.css';
 
 interface BlogPost {
+    _id: string;
     title: string;
-    content: string;
+    Author: string;
+    Description: string;
+    Date: string;
+    user_id: string;
+    updated_at: string;
+    created_at: string;
 }
 
 const BlogDetailPage: React.FC = () => {
@@ -29,8 +35,13 @@ const BlogDetailPage: React.FC = () => {
         <div className="blog-detail">
             {post ? (
                 <>
-                    <h1>{post.title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                    <h1 className="blog-detail-title">{post.title}</h1>
+                    <p className="blog-detail-author"><strong>Author:</strong> {post.Author}</p>
+                    <p className="blog-detail-date"><strong>Date:</strong> {post.Date}</p>
+                    <div
+                        className="blog-detail-description"
+                        dangerouslySetInnerHTML={{ __html: post.Description }}
+                    />
                 </>
             ) : (
                 <p>Loading...</p>
