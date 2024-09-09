@@ -9,7 +9,7 @@ TypeScript Integration: Provides type safety and improved development experience
 
 Project Setup
 1. Clone the Repository
-git clone https://github.com/your-username/react-blog-app.git
+git clone https://github.com/KIRO28/ReactJs_application.git
 cd react-blog-app
 
 2. Install Dependencies 
